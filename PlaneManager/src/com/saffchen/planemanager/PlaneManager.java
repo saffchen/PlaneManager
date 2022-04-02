@@ -2,6 +2,7 @@ package com.saffchen.planemanager;
 
 import java.util.ArrayList;
 import java.util.List;
+import static java.lang.String.valueOf;
 
 public class PlaneManager {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class PlaneManager {
         planes.add(plane2);
         planes.add(plane3);
 
-        print(String.valueOf(planes));
+        print(valueOf(planes));
 
         plane1.addTimeOnService(23000);
         plane2.addTimeOnService(48000);
@@ -27,9 +28,8 @@ public class PlaneManager {
 
         plane1.addTimeOnService(8000);
 
-        System.out.println(plane1.isReadyTimeToService);
-        System.out.println(plane1.isReadyOnService());
-        print(String.valueOf(plane1));
+        print("Готов ли самолет к обслуживанию? " + plane1.isReadyOnService());
+        print(valueOf(plane1));
     }
 
     private static void print(String text){
