@@ -10,7 +10,7 @@ public class Cargo extends Plane {
     @Override
     public boolean isReadyOnService() {
         if (isReadyTimeToService > 20000) {
-            isReadyTimeToService = 0;
+            isReadyTimeToService = isReadyTimeToService - 20000;
             return true;
         }
         return false;

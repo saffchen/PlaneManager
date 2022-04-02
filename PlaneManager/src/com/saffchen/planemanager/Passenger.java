@@ -10,7 +10,7 @@ public class Passenger extends Plane {
     @Override
     public boolean isReadyOnService() {
         if (isReadyTimeToService > 30000) {
-            isReadyTimeToService = 0;
+            isReadyTimeToService = isReadyTimeToService - 30000;
             return true;
         }
         return false;

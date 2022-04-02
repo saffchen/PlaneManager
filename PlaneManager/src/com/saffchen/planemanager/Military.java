@@ -10,7 +10,7 @@ public class Military extends Plane {
     @Override
     public boolean isReadyOnService() {
         if (isReadyTimeToService > 50000) {
-            isReadyTimeToService = 0;
+            isReadyTimeToService = isReadyTimeToService - 50000;
             return true;
         }
         return false;
